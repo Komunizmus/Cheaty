@@ -1,0 +1,10 @@
+x=list(input('Pole cisla: '))
+pole=[0]*10
+
+for i in range(10):
+  for j in range (10):
+    if int(x[i])==j:
+      pole[j]+=1
+
+for i in range(len(pole)):
+  print(str(i) + ' - ' + str(pole[i]))
