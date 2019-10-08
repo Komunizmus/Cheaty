@@ -1,0 +1,13 @@
+#Zrobi slovo pod seba niekolkokrat
+
+n=input('Napis slovo= ')
+m=len(n)
+for i in range(m):
+  print(n[i]*m)
+
+#Zrobi slovo naopak niekolkokrat
+
+n=input('Napis slovo= ')
+m=len(n)
+for i in range(m):
+  print(n[m-(i+1)]*m)
