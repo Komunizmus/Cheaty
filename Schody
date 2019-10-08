@@ -1,0 +1,9 @@
+#Zrobi schody
+n=int(input('Vyska schodov= '))
+for i in range(n):
+  print('* ' * (i+1))
+
+#Zrobi opacne schody
+n=int(input('Vyska schodov= '))
+for i in range(n,0,-1):
+  print('* ' * i)
