@@ -12,3 +12,13 @@ a=list(input('Cislo: '))
 b=a.split()
 c=len(b)
 print(c)
+
+#Zrobi pocet samohlasok v slove
+
+a=input('Slovo: ')
+b=list(a)
+c=0
+for i in range(len(b)):
+  if b[i] in 'AEIOUaeiou':
+    c=c+1
+print(c)
