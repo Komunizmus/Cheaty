@@ -1,0 +1,14 @@
+#Zrobi sucet cifier
+
+a=list(input('Cislo: '))
+b=len(a)
+c=0
+for i in range(b):
+  c=int(c+int(a[i]))
+print(c)
+#Zrobi sucet slov vo vete
+
+a=list(input('Cislo: '))
+b=a.split()
+c=len(b)
+print(c)
