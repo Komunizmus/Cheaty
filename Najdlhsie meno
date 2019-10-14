@@ -1,0 +1,11 @@
+a = open('mena.txt')
+r = a.readlines()
+c = 0
+d = 0
+e = []
+for i in range(len(r)):
+    if len(list(r[i])) > d:
+        d = len(list(r[i]))
+        e = list(r[i])
+for i in range(len(e)-1):
+    print(e[i], end="")
