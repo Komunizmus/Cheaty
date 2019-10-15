@@ -1,0 +1,19 @@
+import random
+
+a = int(input('Napis prve cislo: '))
+b = int(input('Napis druhe cislo: '))
+d = 0
+x = []
+y = []
+for i in range(100):
+    c = random.randint(a, b)
+    x.append(c)
+x.sort()
+print(x)
+for i in range(a, b + 1):
+    for j in range(len(x)):
+        n = x[j]
+        if i == n:
+            d+= 1
+    print(d)
+    d = 0
