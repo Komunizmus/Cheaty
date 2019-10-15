@@ -1,0 +1,16 @@
+a = open('vety.txt')
+b =[line.rstrip("\n") for line in a]
+c=[]
+for i in range(len(b)):
+    c.append([b[i]])
+
+for i in range(len(c)):
+    c[i]=c[i][0].split(" ")
+for i in range(len(c)):
+    c[i].reverse()
+c.reverse()
+
+for i in range(len(c)):
+    for j in range(len(c[i])):
+        print(c[i][j], end=" ")
+    print()
