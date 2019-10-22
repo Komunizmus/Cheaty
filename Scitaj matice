@@ -1,0 +1,12 @@
+a = [[1, 2], [3, 4]]
+b = [[5, 6], [6, 7]]
+c = [[], []]
+
+for i in range(len(a)):
+    for j in range(len(a[i])):
+        c[j].append(a[i][j] + int(b[i][j]))
+
+for i in range(len(a)):
+    for j in range(len(a[i])):
+        print(c[i][j], end=" ")
+    print()
