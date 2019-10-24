@@ -1,0 +1,60 @@
+import random
+
+b = random.randint(1, 3)
+c = 0
+d = 0
+e = 0
+f = False
+while f == False:
+    a = input('Kamen/papier/noznice:\n')
+    b = random.randint(1, 3)
+    if b==1:
+        b='kamen'
+    elif b==2:
+        b='papier'
+    elif b==3:
+        b='noznice'
+
+    if b == a:
+        print('Rovnaky vyber, chod znovu')
+    elif a == 'kamen':
+        if b == 'papier':
+            print('Bod pre pocitac')
+            c += 1
+            e += 1
+            print('Ty:', d , '\n' , 'Pocitac:', c)
+        else:
+            print('Bod pre teba')
+            d += 1
+            e += 1
+            print('Ty:', d , '\n' , 'Pocitac:', c)
+    elif a == 'papier':
+        if b == 'noznice':
+            print('Bod pre pocitac')
+            c += 1
+            e += 1
+            print('Ty:', d , '\n' , 'Pocitac:', c)
+        else:
+            print('Bod pre teba')
+            d += 1
+            e += 1
+            print('Ty:', d , '\n' , 'Pocitac:', c)
+    elif a == 'noznice':
+        if b == 'kamen':
+            print('Bod pre pocitac')
+            c += 1
+            e += 1
+            print('Ty:', d , '\n' , 'Pocitac:', c)
+        else:
+            print('Bod pre teba')
+            d += 1
+            e += 1
+            print('Ty:', d , '\n' , 'Pocitac:', c)
+    else:
+        print('Vyber si kamen, papier alebo noznice')
+    if c == d + 2:
+        print('Prehral si po ', e ,' pokusoch')
+        break
+    if d == c + 2:
+        print('Vyhral si po ', e ,' pokusoch')
+        break
