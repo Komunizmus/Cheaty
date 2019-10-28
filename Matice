@@ -1,0 +1,19 @@
+#V matici najdi cisla, ktore su mensie nez n a nahrad ich
+
+def prepis(matica, n, m):
+    for i in range(len(matica)):
+        for j in range(len(matica[i])):
+            if matica[i][j] <= n:
+                matica[i][j] = m
+
+
+matica = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+n = int(input('Zadaj n: '))
+m = int(input('Zadaj m: '))
+
+prepis(matica, n, m)
+
+for i in range(len(matica)):
+    for j in range(len(matica[i])):
+        print(matica[i][j], end=" ")
+    print()
