@@ -1,0 +1,29 @@
+a = int(input('Zadaj cislo: '))
+d = 2
+list = []
+print(str(a) + ' = ', end=' ')
+while a > 1:
+    if a % d == 0:
+        list.append(d)
+        a = a / d
+    else:
+        d += 1
+
+print(list[0], end=' ')
+for i in range(1, len(list)):
+    print(' = ' + str(list[i]), end=' ')
+
+veta = list(input("napis vetu: "))
+sirka = int(input("zadaj sirku: "))
+d = 0
+
+
+def rozdel(veta, sirka, d):
+    for j in range(len(veta)):
+        print(veta[d], end='')
+        d += 1
+        if int(d % sirka) == 0:
+            print()
+
+
+rozdel(veta, sirka, d)
