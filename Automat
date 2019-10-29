@@ -1,0 +1,27 @@
+import random
+
+penaze = int(input('Vloz peniaze: '))
+auto = []
+vhod = 0
+f=True
+
+while f:
+    vhod += 1
+    penaze -= 1
+    slot1 = random.randint(1, 20)
+    slot2 = random.randint(1, 20)
+    slot3 = random.randint(1, 20)
+    print('|',slot1, '|', slot2, '|', slot3,'|')
+
+    if slot1 == slot2 == slot3:
+        penaze += 100
+        print('Vyhral si stovku')
+    elif slot1 == slot2 or slot2 == slot3 or slot1 == slot3:
+        penaze += 5
+        print('Vyhral si 5 eur')
+    else:
+        print('Stratil si euro')
+
+    if vhod == 100 or penaze==0:
+        print('Hotovo! Momentalne mas', penaze, 'eur')
+        break
