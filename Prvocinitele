@@ -1,0 +1,16 @@
+cislo = int(input('Napis cislo: '))
+b = cislo
+vypis = []
+d = 2
+while d < b:
+    if cislo % d == 0:
+        vypis.append(d)
+        vypis.append(' * ')
+        cislo = cislo / d
+
+    else:
+        d += 1
+vypis.pop()
+print(str(b), '=', end=' ')
+for i in range(len(vypis)):
+    print(str(vypis[i]), end=" ")
