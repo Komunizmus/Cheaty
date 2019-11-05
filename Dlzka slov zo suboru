@@ -1,0 +1,14 @@
+text = open('isaac.txt').read().split()
+k = 0
+r = 0
+d = 0
+dlzka = int(input('Aku dlzku ma tvoje slovo? '))
+for i in text:
+    if len(i) > dlzka:
+        d += 1
+    elif len(i) == dlzka:
+        r += 1
+    elif len(i) < dlzka:
+        k += 1
+    print(i)
+print('V texte je ', d, ' dlhsich, ', k, ' kratsich a ', r, ' rovnakych slov.')
