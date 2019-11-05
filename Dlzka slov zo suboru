@@ -12,3 +12,29 @@ for i in text:
         k += 1
     print(i)
 print('V texte je ', d, ' dlhsich, ', k, ' kratsich a ', r, ' rovnakych slov.')
+
+
+
+text = open('isaac.txt').read().split()
+a = open('isaac.txt', 'r')
+peter = [line.rstrip("\n") for line in a]
+c = []
+for i in range(len(peter)):
+    c += str(peter[i].split(" "))
+k = 0
+r = 0
+d = 0
+dlzka = int(input('Aku dlzku ma tvoje slovo? '))
+for i in text:
+    if len(i) > dlzka:
+        d += 1
+    elif len(i) == dlzka:
+        r += 1
+    elif len(i) < dlzka:
+        k += 1
+for j in range(len(c)):
+    for i in range(len(c) - 1):
+        if c[i + 1] < c[i]:
+            c[i], c[i + 1] = c[i + 1], c[i]
+print(c)
+print('V texte je ', d, ' dlhsich, ', k, ' kratsich a ', r, ' rovnakych slov.')
