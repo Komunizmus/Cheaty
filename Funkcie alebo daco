@@ -1,0 +1,39 @@
+a = [1, 2, 3, 4, 5]
+b = [3, 4, 5, 6, 7]
+zjed = []
+prien = []
+rozd = []
+sym = []
+kort = []
+
+
+def zjednotenie(a, b):
+    for i in range(len(a)):
+        if a[i] not in zjed:
+            zjed.append(a[i])
+    for i in range(len(b)):
+        if b[i] not in zjed:
+            zjed.append(b[i])
+    return zjed
+
+def prienik(a,b):
+    for i in range(len(a)):
+        if a[i] in b:
+            prien.append(a[i])
+    return prien
+
+
+def rozdiel(a,b):
+    for i in range(len(a)):
+        if a[i] not in b:
+            rozd.append(a[i])
+    return rozd
+
+def sym_dif(a,b):
+    for i in range(len(a)):
+        if a[i] not in b:
+            sym.append(a[i])
+        if b[i] not in a:
+            if b[i] not in sym:
+                sym.append(b[i])
+    return sym
