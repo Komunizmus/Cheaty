@@ -1,0 +1,7 @@
+import random
+
+x = int(input('Ako dlhu maticu chces?'))
+y = int(input('Ako vysoku maticu chces?'))
+
+for i in range(y):
+    print(random.sample(range(0, 20), x))
