@@ -1,0 +1,19 @@
+priklad = list(input('Napis vyraz: '))
+a = 0
+
+for i in range(len(priklad)):
+    if '(' in priklad[i]:
+        priklad.remove('(')
+        priklad.append('f')
+        if ')' in priklad:
+            priklad.remove(')')
+            priklad.append('g')
+        if ')' not in priklad:
+            a+=1
+    if ')' in priklad[i]:
+        a+=1
+
+if a>0:
+    print('Mas to zle')
+else:
+    print('Mas to dobre')
