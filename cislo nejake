@@ -1,0 +1,27 @@
+l = []
+F = 0
+while F == False:
+    cislo = input('Zadaj cislo: ')
+    if cislo == 'end':
+        break
+    elif cislo in 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz':
+        print('Pis cisla, nie slova')
+    else:
+        l.append(cislo)
+        for i in range(len(l)):
+            for j in range(i + 1, len(l)):
+                if l[i] > l[j]:
+                    l[i], l[j] = l[j], l[i]
+        print(l)
+
+cislo = input('Zadaj cislo: ')
+
+
+def ciferny_sucet(n):
+    x = sum(int(digit) for digit in str(n))
+    if x < 10:
+        return x
+    else:
+        return ciferny_sucet(x)
+
+print(ciferny_sucet(cislo))
