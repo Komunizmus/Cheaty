@@ -1,0 +1,23 @@
+from tkinter import *
+import random
+
+canvas = Canvas(width = 1000,height = 1000)
+canvas.pack()
+color = ['red', 'blue', 'black', 'yellow', 'green', 'purple', 'orange', 'brown', 'pink']
+
+def dom(s):
+    x=s.x
+    y=s.y
+    canvas.create_rectangle(x-50,y-50,x+50,y+50,fill=random.choice(color))
+    canvas.create_line(x-50,y-50,x,y-100,x+50,y-50)
+
+def emojimovie(s):
+    x=s.x
+    y=s.y
+    canvas.create_oval(x,y,x+100,y+100,fill=random.choice(color))
+    canvas.create_oval(x+25, y+25, x+35, y+35, fill='white')
+    canvas.create_oval(x + 65, y + 25, x + 75, y + 35, fill='white')
+    creater
+canvas.bind('<Button-1>',dom)
+canvas.bind('<Button-3>',emojimovie)
+canvas.mainloop()
